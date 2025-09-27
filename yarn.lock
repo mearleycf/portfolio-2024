@@ -649,6 +649,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify-json/ri@npm:^1.2.5":
+  version: 1.2.5
+  resolution: "@iconify-json/ri@npm:1.2.5"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/aa75ca22d4e1109a2986d798787112d0755c63cd1a772896f324ecf7f6583704e8791bdb0b86051557d622915877d5185f858a2032ee43a817e78f57bed485c9
+  languageName: node
+  linkType: hard
+
 "@iconify-json/simple-icons@npm:^1.2.53":
   version: 1.2.53
   resolution: "@iconify-json/simple-icons@npm:1.2.53"
@@ -2042,6 +2051,7 @@ __metadata:
     "@fontsource-variable/inter": "npm:^5.2.8"
     "@fontsource/lilita-one": "npm:^5.2.8"
     "@fontsource/righteous": "npm:^5.2.7"
+    "@iconify-json/ri": "npm:^1.2.5"
     "@iconify-json/simple-icons": "npm:^1.2.53"
     "@iconify-json/solar": "npm:^1.2.4"
     "@stylistic/eslint-plugin": "npm:^5.4.0"
@@ -6959,11 +6969,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.9.2#optional!builtin<compat/typescript>":
   version: 5.9.2
-  resolution: "typescript@patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=b45daf"
+  resolution: "typescript@patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/66fc07779427a7c3fa97da0cf2e62595eaff2cea4594d45497d294bfa7cb514d164f0b6ce7a5121652cf44c0822af74e29ee579c771c405e002d1f23cf06bfde
+  checksum: 10c0/34d2a8e23eb8e0d1875072064d5e1d9c102e0bdce56a10a25c0b917b8aa9001a9cf5c225df12497e99da107dc379360bc138163c66b55b95f5b105b50578067e
   languageName: node
   linkType: hard
 

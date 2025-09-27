@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # vscode specific files
 .vscode/settings.json
+
+# trunk tool files (contains test data with vulnerable dependencies)
+.trunk/

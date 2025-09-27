@@ -1,11 +1,10 @@
-import { defineConfig, squooshImageService } from 'astro/config'
+import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import markdoc from '@astrojs/markdoc'
-import qwikdev from '@qwikdev/astro'
 import icon from 'astro-icon'
 
-import vercel from '@astrojs/vercel/serverless'
+import vercel from '@astrojs/vercel'
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,11 +18,8 @@ export default defineConfig({
     }),
     markdoc(),
     icon(),
-    qwikdev(),
   ],
   output: 'server',
   adapter: vercel(),
-  image: {
-    service: squooshImageService(),
-  },
+  // Using default Sharp image service (no configuration needed)
 })

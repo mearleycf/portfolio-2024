@@ -27,8 +27,34 @@ import { Icon } from 'astro-icon/components'
         <a
           href="/"
           class="hover:text-paleTaupeBrown-500 block p-2"
-          >Home</a
+          >Developer</a
         >
+      </li>
+      <li class="relative group">
+        <a
+          href="/design"
+          class="hover:text-paleTaupeBrown-500 block p-2"
+          aria-haspopup="true"
+          >UX Designer</a
+        >
+        <ul
+          class="absolute left-0 top-full hidden w-64 rounded bg-turquoise-600 pt-2 text-lg shadow-lg group-hover:block group-focus-within:block"
+        >
+          <li>
+            <a
+              href="/design/public-service-application"
+              class="hover:text-paleTaupeBrown-500 block rounded px-3 py-2"
+              >Public Service Application</a
+            >
+          </li>
+          <li>
+            <a
+              href="/design/legacy-case-management"
+              class="hover:text-paleTaupeBrown-500 block rounded px-3 py-2"
+              >Legacy Case Management</a
+            >
+          </li>
+        </ul>
       </li>
       <li>
         <a

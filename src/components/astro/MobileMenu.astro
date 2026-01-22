@@ -34,19 +34,68 @@
             <a
               href="/"
               class="block py-2"
-              >Home</a
+              >Developer</a
             >
           </li>
           <li>
+            <div class="flex items-center justify-between">
+              <a
+                href="/design"
+                class="block py-2"
+                >UX Designer</a
+              >
+              <button
+                id="mobile-ux-toggle"
+                class="p-2"
+                aria-expanded="false"
+                aria-controls="mobile-ux-submenu"
+                type="button"
+              >
+                <svg
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <ul
+              id="mobile-ux-submenu"
+              class="hidden space-y-2 pl-4 text-lg"
+            >
+              <li>
+                <a
+                  href="/design/public-service-application"
+                  class="block py-2"
+                  >Public Service Application</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/design/legacy-case-management"
+                  class="block py-2"
+                  >Legacy Case Management</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
             <a
-              href="/about"
+              href="#about"
               class="block py-2"
               >About</a
             >
           </li>
           <li>
             <a
-              href="/contact"
+              href="#contact"
               class="block py-2"
               >Contact</a
             >
@@ -90,9 +139,20 @@
     const menuButton = document.getElementById('mobile-menu-button')
     const mobileMenu = document.getElementById('mobile-menu')
 
+    const uxToggle = document.getElementById('mobile-ux-toggle')
+    const uxSubmenu = document.getElementById('mobile-ux-submenu')
+
     if (menuButton && mobileMenu) {
       menuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden')
+      })
+    }
+
+    if (uxToggle && uxSubmenu) {
+      uxToggle.addEventListener('click', () => {
+        const isHidden = uxSubmenu.classList.contains('hidden')
+        uxSubmenu.classList.toggle('hidden', !isHidden)
+        uxToggle.setAttribute('aria-expanded', String(isHidden))
       })
     }
   })

@@ -1,0 +1,175 @@
+---
+import Layout from '@layouts/BaseLayout.astro'
+import staticSvg from '../../assets/static_gradient.svg'
+import animatedSvg from '../../assets/animated_gradient_css.svg'
+
+const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
+---
+
+<style>
+  .teal-svg {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<Layout title="Public Service Application UX | Mike Earley">
+  <main
+    class="teal-svg relative z-10 min-h-screen pb-16 shadow-xl shadow-darkTeal-600"
+    style={`background-color: #0b2228; background-image: url(${envSvg})`}
+  >
+    <section class="mx-auto flex max-w-5xl flex-col gap-12 px-6 pb-10 pt-12 text-lightTurquoise-500">
+      <header class="flex flex-col gap-4">
+        <h1 class="font-display text-4xl md:text-5xl">
+          Public Service Application UX
+        </h1>
+        <p class="max-w-2xl text-base font-semibold tracking-wide md:text-lg">
+          Design exploration of a high-stakes public service enrollment flow,
+          focused on clarity, accessibility, and applicant confidence.
+        </p>
+        <ul class="flex flex-wrap gap-2 text-xs font-semibold uppercase">
+          <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+            Public-facing
+          </li>
+          <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+            Compliance-driven
+          </li>
+          <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+            Mobile-first
+          </li>
+        </ul>
+      </header>
+
+      <section aria-labelledby="public-problem" class="flex flex-col gap-4">
+        <h2 id="public-problem" class="font-display text-2xl">The problem</h2>
+        <p class="text-sm text-lightTurquoise-600">
+          Applicants navigating eligibility-based public service enrollment
+          workflows often struggle to understand progress, required
+          documentation, and submission status—particularly when requirements
+          are conditional and compliance language is presented without clear
+          guidance.
+        </p>
+        <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+          <!-- TODO: Replace with problem overview image -->
+          <div class="aspect-[16/9] w-full rounded-xl bg-darkTeal-900/60"></div>
+        </figure>
+      </section>
+
+      <section aria-labelledby="public-persona" class="flex flex-col gap-4">
+        <h2 id="public-persona" class="font-display text-2xl">
+          Understanding the applicant
+        </h2>
+        <p class="text-sm text-lightTurquoise-600">
+          This work focused on applicants completing long, interruption-prone
+          public service applications primarily on mobile devices.
+        </p>
+        <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+          <img
+            src="../../assets/danielle_persona_full.png"
+            alt="Primary public service applicant persona overview."
+            class="w-full rounded-xl"
+            loading="lazy"
+          />
+          <figcaption class="mt-3 text-xs text-lightTurquoise-600">
+            Primary persona used to evaluate clarity, progress visibility, and
+            document requirements.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="public-service-blueprint" class="flex flex-col gap-4">
+        <h2 id="public-service-blueprint" class="font-display text-2xl">
+          Service blueprint
+        </h2>
+        <p class="text-sm text-lightTurquoise-600">
+          To identify where applicants lose confidence or abandon the process,
+          the end-to-end enrollment flow was mapped across user intent,
+          front-stage UI, and back-stage system behavior.
+        </p>
+        <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+          <img
+            src="../../assets/Blueprint_v4.png"
+            alt="Service blueprint mapping applicant enrollment flow."
+            class="w-full rounded-xl"
+            loading="lazy"
+          />
+          <figcaption class="mt-3 text-xs text-lightTurquoise-600">
+            Key UX risk points occur when requirements are conditional, work
+            happens offline, and application status is unclear.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        aria-labelledby="public-progress-models"
+        class="flex flex-col gap-4"
+      >
+        <h2 id="public-progress-models" class="font-display text-2xl">
+          Exploring progress models
+        </h2>
+        <p class="text-sm text-lightTurquoise-600">
+          We explored multiple progress and requirement models to help
+          applicants understand what was required, what had been completed, and
+          what remained—without relying on late-stage error messages.
+        </p>
+        <div class="grid gap-4 md:grid-cols-3">
+          <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4">
+            <!-- TODO: Replace with progress model concept A -->
+            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60"></div>
+          </figure>
+          <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4">
+            <!-- TODO: Replace with progress model concept B -->
+            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60"></div>
+          </figure>
+          <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4">
+            <!-- TODO: Replace with progress model concept C -->
+            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60"></div>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="public-direction" class="flex flex-col gap-4">
+        <h2 id="public-direction" class="font-display text-2xl">
+          Final direction
+        </h2>
+        <p class="text-sm text-lightTurquoise-600">
+          A guided checklist-based enrollment model that made requirements
+          explicit, surfaced document needs early, and separated plain-language
+          guidance from compliance detail.
+        </p>
+        <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+          <!-- TODO: Replace with final direction image -->
+          <div class="aspect-[16/9] w-full rounded-xl bg-darkTeal-900/60"></div>
+        </figure>
+      </section>
+
+      <section aria-labelledby="public-results" class="flex flex-col gap-4">
+        <h2 id="public-results" class="font-display text-2xl">
+          Resulting design
+        </h2>
+        <p class="text-sm text-lightTurquoise-600">
+          The final experience clearly communicates progress, outstanding
+          requirements, and application status across mobile and desktop
+          contexts, supporting both assistive navigation and applicant
+          confidence.
+        </p>
+        <div class="flex flex-col gap-4 md:flex-row">
+          <figure class="flex-1 rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+            <!-- TODO: Replace with desktop design image -->
+            <div class="aspect-[16/10] w-full rounded-xl bg-darkTeal-900/60"></div>
+          </figure>
+          <figure class="md:w-1/3 rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+            <!-- TODO: Replace with mobile design image -->
+            <div class="aspect-[9/16] w-full rounded-xl bg-darkTeal-900/60"></div>
+          </figure>
+        </div>
+      </section>
+      <p class="text-xs text-lightTurquoise-600">
+        Note: This case study represents an independent UX design exploration
+        informed by real-world public service workflows. It is not affiliated
+        with or endorsed by any government agency.
+      </p>
+    </section>
+  </main>
+</Layout>

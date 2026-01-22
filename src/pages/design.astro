@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '@layouts/BaseLayout.astro'
+import mikeIllustration from '@assets/mike_illustration_small.jpg'
+import staticSvg from '../assets/static_gradient.svg'
+import animatedSvg from '../assets/animated_gradient_css.svg'
+import About from '@components/astro/About.astro'
+const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
+---
+
+<style>
+  .teal-svg {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<Layout title="UX Design Portfolio | Mike Earley">
+  <main
+    class="teal-svg relative z-10 min-h-screen pb-16 shadow-xl shadow-darkTeal-600"
+    style={`background-color: #0b2228; background-image: url(${envSvg})`}
+  >
+    <section class="mx-auto flex max-w-5xl flex-col gap-10 px-6 pb-8">
+      <About />
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <article
+          class="flex h-full flex-col gap-4 rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6 text-lightTurquoise-500 shadow-strong-inner"
+        >
+          <div class="flex flex-col gap-2">
+            <h2 class="font-display text-2xl">
+              Legacy Case Management Redesign
+            </h2>
+            <p class="text-sm leading-relaxed text-lightTurquoise-600">
+              Reducing errors in a complex legacy workflow without slowing
+              experienced users.
+            </p>
+          </div>
+          <ul class="flex flex-wrap gap-2 text-xs font-semibold uppercase">
+            <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+              Legacy system
+            </li>
+            <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+              Accessibility-first
+            </li>
+            <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+              Mixed experience users
+            </li>
+          </ul>
+          <a
+            href="/design/legacy-case-management"
+            class="mt-auto inline-flex w-fit items-center gap-2 text-sm font-semibold text-lightTurquoise-700 transition hover:text-lightTurquoise-500"
+          >
+            View case study
+            <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article
+          class="flex h-full flex-col gap-4 rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6 text-lightTurquoise-500 shadow-strong-inner"
+        >
+          <div class="flex flex-col gap-2">
+            <h2 class="font-display text-2xl">
+              Public Service Application UX
+            </h2>
+            <p class="text-sm leading-relaxed text-lightTurquoise-600">
+              Making a high-stakes application process clear, accessible, and
+              mobile-friendly.
+            </p>
+          </div>
+          <ul class="flex flex-wrap gap-2 text-xs font-semibold uppercase">
+            <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+              Public-facing
+            </li>
+            <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+              Compliance-driven
+            </li>
+            <li class="rounded-full bg-darkTeal-600/70 px-3 py-1">
+              Mobile-first
+            </li>
+          </ul>
+          <a
+            href="/design/public-service-application"
+            class="mt-auto inline-flex w-fit items-center gap-2 text-sm font-semibold text-lightTurquoise-700 transition hover:text-lightTurquoise-500"
+          >
+            View case study
+            <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>

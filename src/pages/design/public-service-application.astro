@@ -2,6 +2,8 @@
 import Layout from '@layouts/BaseLayout.astro'
 import staticSvg from '../../assets/static_gradient.svg'
 import animatedSvg from '../../assets/animated_gradient_css.svg'
+import personaImg from '../../assets/danielle_persona_full.png'
+import blueprintImg from '../../assets/Blueprint_v4.png'
 
 const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
 ---
@@ -66,7 +68,7 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
         </p>
         <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
           <img
-            src="../../assets/danielle_persona_full.png"
+            src={personaImg.src}
             alt="Primary public service applicant persona overview."
             class="w-full rounded-xl"
             loading="lazy"
@@ -89,7 +91,7 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
         </p>
         <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
           <img
-            src="../../assets/Blueprint_v4.png"
+            src={blueprintImg.src}
             alt="Service blueprint mapping applicant enrollment flow."
             class="w-full rounded-xl"
             loading="lazy"

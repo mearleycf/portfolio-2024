@@ -28,6 +28,3 @@ pnpm-debug.log*
 
 # trunk tool files (contains test data with vulnerable dependencies)
 .trunk/
-
-# Snyk Security Extension - AI Rules (auto-generated)
-.cursor/rules/snyk_rules.mdc

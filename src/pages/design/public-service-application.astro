@@ -21,7 +21,9 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
     class="teal-svg relative z-10 min-h-screen pb-16 shadow-xl shadow-darkTeal-600"
     style={`background-color: #0b2228; background-image: url(${envSvg})`}
   >
-    <section class="mx-auto flex max-w-5xl flex-col gap-12 px-6 pb-10 pt-12 text-lightTurquoise-500">
+    <section
+      class="mx-auto flex max-w-5xl flex-col gap-12 px-6 pb-10 pt-12 text-lightTurquoise-500"
+    >
       <header class="flex flex-col gap-4">
         <h1 class="font-display text-4xl md:text-5xl">
           Public Service Application UX
@@ -43,8 +45,30 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
         </ul>
       </header>
 
-      <section aria-labelledby="public-problem" class="flex flex-col gap-4">
-        <h2 id="public-problem" class="font-display text-2xl">The problem</h2>
+      <section
+        aria-labelledby="public-problem"
+        class="flex flex-col gap-4"
+      >
+        <aside
+          aria-label="Work in progress"
+          class="rounded-2xl border-2 border-dashed border-amber-300/80 bg-amber-300/10 px-6 py-5"
+        >
+          <p
+            class="font-display text-xl uppercase tracking-widest text-amber-200"
+          >
+            Work in progress
+          </p>
+          <p class="mt-2 max-w-2xl text-sm text-lightTurquoise-500">
+            Images for this case study are intentionally omitted while the work
+            is being prepared. They will be added soon.
+          </p>
+        </aside>
+        <h2
+          id="public-problem"
+          class="font-display text-2xl"
+        >
+          The problem
+        </h2>
         <p class="text-sm text-lightTurquoise-600">
           Applicants navigating eligibility-based public service enrollment
           workflows often struggle to understand progress, required
@@ -52,21 +76,31 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
           are conditional and compliance language is presented without clear
           guidance.
         </p>
-        <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+        <figure
+          class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6"
+        >
           <!-- TODO: Replace with problem overview image -->
           <div class="aspect-[16/9] w-full rounded-xl bg-darkTeal-900/60"></div>
         </figure>
       </section>
 
-      <section aria-labelledby="public-persona" class="flex flex-col gap-4">
-        <h2 id="public-persona" class="font-display text-2xl">
+      <section
+        aria-labelledby="public-persona"
+        class="flex flex-col gap-4"
+      >
+        <h2
+          id="public-persona"
+          class="font-display text-2xl"
+        >
           Understanding the applicant
         </h2>
         <p class="text-sm text-lightTurquoise-600">
           This work focused on applicants completing long, interruption-prone
           public service applications primarily on mobile devices.
         </p>
-        <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+        <figure
+          class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6"
+        >
           <img
             src={personaImg.src}
             alt="Primary public service applicant persona overview."
@@ -80,8 +114,14 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
         </figure>
       </section>
 
-      <section aria-labelledby="public-service-blueprint" class="flex flex-col gap-4">
-        <h2 id="public-service-blueprint" class="font-display text-2xl">
+      <section
+        aria-labelledby="public-service-blueprint"
+        class="flex flex-col gap-4"
+      >
+        <h2
+          id="public-service-blueprint"
+          class="font-display text-2xl"
+        >
           Service blueprint
         </h2>
         <p class="text-sm text-lightTurquoise-600">
@@ -89,7 +129,9 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
           the end-to-end enrollment flow was mapped across user intent,
           front-stage UI, and back-stage system behavior.
         </p>
-        <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+        <figure
+          class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6"
+        >
           <img
             src={blueprintImg.src}
             alt="Service blueprint mapping applicant enrollment flow."
@@ -107,7 +149,10 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
         aria-labelledby="public-progress-models"
         class="flex flex-col gap-4"
       >
-        <h2 id="public-progress-models" class="font-display text-2xl">
+        <h2
+          id="public-progress-models"
+          class="font-display text-2xl"
+        >
           Exploring progress models
         </h2>
         <p class="text-sm text-lightTurquoise-600">
@@ -116,23 +161,38 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
           what remained—without relying on late-stage error messages.
         </p>
         <div class="grid gap-4 md:grid-cols-3">
-          <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4">
+          <figure
+            class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4"
+          >
             <!-- TODO: Replace with progress model concept A -->
-            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60"></div>
+            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60">
+            </div>
           </figure>
-          <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4">
+          <figure
+            class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4"
+          >
             <!-- TODO: Replace with progress model concept B -->
-            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60"></div>
+            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60">
+            </div>
           </figure>
-          <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4">
+          <figure
+            class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-4"
+          >
             <!-- TODO: Replace with progress model concept C -->
-            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60"></div>
+            <div class="aspect-[4/3] w-full rounded-xl bg-darkTeal-900/60">
+            </div>
           </figure>
         </div>
       </section>
 
-      <section aria-labelledby="public-direction" class="flex flex-col gap-4">
-        <h2 id="public-direction" class="font-display text-2xl">
+      <section
+        aria-labelledby="public-direction"
+        class="flex flex-col gap-4"
+      >
+        <h2
+          id="public-direction"
+          class="font-display text-2xl"
+        >
           Final direction
         </h2>
         <p class="text-sm text-lightTurquoise-600">
@@ -140,14 +200,22 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
           explicit, surfaced document needs early, and separated plain-language
           guidance from compliance detail.
         </p>
-        <figure class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+        <figure
+          class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6"
+        >
           <!-- TODO: Replace with final direction image -->
           <div class="aspect-[16/9] w-full rounded-xl bg-darkTeal-900/60"></div>
         </figure>
       </section>
 
-      <section aria-labelledby="public-results" class="flex flex-col gap-4">
-        <h2 id="public-results" class="font-display text-2xl">
+      <section
+        aria-labelledby="public-results"
+        class="flex flex-col gap-4"
+      >
+        <h2
+          id="public-results"
+          class="font-display text-2xl"
+        >
           Resulting design
         </h2>
         <p class="text-sm text-lightTurquoise-600">
@@ -157,13 +225,19 @@ const envSvg = import.meta.env.DEV ? staticSvg.src : animatedSvg.src
           confidence.
         </p>
         <div class="flex flex-col gap-4 md:flex-row">
-          <figure class="flex-1 rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+          <figure
+            class="flex-1 rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6"
+          >
             <!-- TODO: Replace with desktop design image -->
-            <div class="aspect-[16/10] w-full rounded-xl bg-darkTeal-900/60"></div>
+            <div class="aspect-[16/10] w-full rounded-xl bg-darkTeal-900/60">
+            </div>
           </figure>
-          <figure class="md:w-1/3 rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6">
+          <figure
+            class="rounded-2xl border border-darkTeal-300/60 bg-darkTeal-800/40 p-6 md:w-1/3"
+          >
             <!-- TODO: Replace with mobile design image -->
-            <div class="aspect-[9/16] w-full rounded-xl bg-darkTeal-900/60"></div>
+            <div class="aspect-[9/16] w-full rounded-xl bg-darkTeal-900/60">
+            </div>
           </figure>
         </div>
       </section>
